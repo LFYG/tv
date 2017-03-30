@@ -43,16 +43,16 @@ namespace web.layout.behavior.main.player{
 		aPlayer.setCustomLogo(logo.copyHandle());
  		
 		aPlayer.OnDownloadCodec =  function(strCodecPath){ 
-    		if( ltOwner.getForm().msgboxTest("µ±Ç°ÊÓÆµÈ±ÉÙ±ØĞëµÄ½âÂëÆ÷ÎÄ¼ş£¬ÊÇ·ñÏÖÔÚÏÂÔØ£¿","TV") ) {
+    		if( ltOwner.getForm().msgboxTest("å½“å‰è§†é¢‘ç¼ºå°‘å¿…é¡»çš„è§£ç å™¨æ–‡ä»¶ï¼Œæ˜¯å¦ç°åœ¨ä¸‹è½½ï¼Ÿ","TV") ) {
     		    import zlib.httpFile; 
-   				zlib.httpFile.download("http://aplayer.open.xunlei.com/codecs.zip","ÕıÔÚÏÂÔØ½âÂëÆ÷","/download","~\lib\thunder\aPlayer\.res\codecs",,..mainForm);
+   				zlib.httpFile.download("http://aplayer.open.xunlei.com/codecs.zip","æ­£åœ¨ä¸‹è½½è§£ç å™¨","/download","~\lib\thunder\aPlayer\.res\codecs",,..mainForm);
          	}	
     		aPlayer.setConfig( 19 ); 
 		}	
 		
 		aPlayer.OnBuffer =  function(percent){ 
 		    var progress = aPlayer.getBufferProgress();
-		    if(progress < 0 || progress > 99£© {
+		    if(progress < 0 || progress > 99)  {
 		    	..wbLayout.getEle("buffertips").innerHTML = "";		    	
 		    } else {
 		    	..wbLayout.getEle("buffertips").innerHTML = " - buffering..("+progress+"%)";
